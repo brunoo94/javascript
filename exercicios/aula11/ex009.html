@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paises</title>
+
+    <style>
+        div#res {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Consultar Cidadania</h1>
+    Pais que vive: <input type="text" name="pais" id="txtpais"> 
+    <input type="button" value="Consultar" onclick="consultar()">
+    <div id="res"></div>
+
+    <script>
+ 
+       function consultar(){
+            
+            var p = document.getElementById('txtpais')
+            var res = document.getElementById('res')
+            var pais = (p.value)
+            var lowpais = pais.toLowerCase()
+                            
+            if(lowpais == 'brasil'){
+                res.innerHTML = `Você é <strong>BRASILEIRO</strong>`
+            } else {
+                res.innerHTML = `Você é <strong>ESTRANGEIRO</strong>` 
+            }
+        }
+    </script>
+
+</body>
+</html>

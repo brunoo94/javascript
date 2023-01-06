@@ -1,0 +1,42 @@
+body {
+    background: rgb(59, 59, 189);
+    font: normal 15pt Arial;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.623);
+}
+
+select#selnum {
+    width: 250px;
+}
+
+input#txtn{
+    width: 100px;
+}
+
+div#lista{
+    padding-top: 20px;
+    text-align: center;
+}
+input#btnf {
+    margin-top: 20px;
+    margin-left: 215px;
+    margin-bottom: 20px;
+    
+}
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}

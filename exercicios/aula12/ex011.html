@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleição</title>
+
+    <style>
+        div#res{
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificar obrigação de voto</h1>
+    Digite sua idade: <input type="number" name="numidade" id="numidade">
+    <input type="button" value="Verificar" onclick="consultar()">
+    <div id="res"></div>
+
+    <script>
+
+        function consultar(){
+            var dataNas = document.getElementById('numidade')
+            var res = document.getElementById('res')
+            var idade = (dataNas.value)
+
+            if(idade < 16){
+                res.innerHTML = `Com ${idade} anos de idade, <strong>[Não vota]</strong>`
+            }else if (idade < 18 || idade >= 67){
+                res.innerHTML = `Com ${idade} anos de idade, <strong>[Voto opcional]</strong>`
+            }else {
+                res.innerHTML = `Com ${idade} anos de idade, <strong>[Voto obrigatório]</strong>`
+            }
+        }
+    </script>
+</body>
+</html>
